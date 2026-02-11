@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo: #000;
+    --color-texto: #fff;
+    --color-neon: #00f7ff;
+}
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #000000,
+        #050a30,
+        #001f3f,
+        #000000
+    );
+    background-attachment: fixed;
+    color: var(--color-texto);
+    line-height:1.6;
+}
+header {
+    text-align: center;
+    padding: 30px 20px; 
+    border-bottom:2px solid var(--color-neon);
+}
+header h1 {
+    color: var(--color-neon);
+    font-size: 32px;
+    text-shadow: 0 0 10px var(--color-neon);
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 20px;
+}
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--color-neon);
+    border-radius:10px;
+    box-shadow:0 0 20px var(--color-fondo);
+    
+}
+.button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-neon);
+    background: transparent;
+    border-radius: 6px;
+}
+.button a {
+    color: var(--color-neon);
+    text-decoration: none;
+    font-weight: bold;
+}
+@keyframes fondoNeon{
+    0% {
+        backgroundd-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+body {
+    background-size: 300% 300%;
+    animation: fondoNeon 20s ease infinite;
+}
+
+header,
+section,
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter:blur(4px);
+    border-radius: 10px;
+}
